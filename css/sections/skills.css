@@ -47,38 +47,31 @@
         width: 100%;
 
         & .icons-list-wrapper {
-            overflow: hidden;
             margin-top: 8px;
             display: flex;
             gap: 12px;
-
-            &:nth-child(1)>.icons-list {
-                animation: move-left 30s linear infinite;
-            }
-
-            &:nth-child(2)>.icons-list {
-                animation: move-right 60s linear infinite;
-            }
         }
 
         & .icons-list {
             display: flex;
-            min-width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 12px;
-            flex-shrink: 0;
+            width: 100%;
         }
 
         & .icon-badges {
             display: flex;
+            flex-shrink: 0;
             justify-content: center;
             align-items: center;
             gap: 1.14em;
             border-radius: 12px;
-            padding: 0.6em 0;
-            width: 12em;
+            padding: 0.6em 1.5em;
             font-weight: 700;
             font-size: var(--caption-font-size);
             text-transform: uppercase;
+            white-space: nowrap;
 
             & img {
                 height: 2em;
