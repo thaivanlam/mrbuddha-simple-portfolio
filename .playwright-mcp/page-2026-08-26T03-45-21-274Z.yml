@@ -1,0 +1,163 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e6]:
+      - heading "Thái Văn Lâm" [level=2] [ref=e7]
+      - generic [ref=e8]: Software Engineer
+      - paragraph [ref=e10]: Seeking a Fresher Job position in software development.
+  - generic [ref=e12]:
+    - generic [ref=e13]:
+      - heading "Skills & Expertise" [level=1] [ref=e14]
+      - paragraph [ref=e15]: Entry-level Backend Developer with hands-on experience in Java, Spring Boot, MySQL, and RESTful API development. Familiar with database design, Git, and object-oriented programming principles. Passionate about backend development and continuously improving technical skills through personal projects and learning.
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - generic [ref=e19]:
+            - img "check-icon" [ref=e20]
+            - heading "Tools & Technologies" [level=2] [ref=e21]
+          - paragraph [ref=e22]: Proficient in Java Spring Boot and React/Redux, with practical experience architecting microservices systems, integrating message queues (RabbitMQ), and containerizing applications with Docker. Committed to clean code principles and building reliable, user-friendly applications.
+        - generic [ref=e25]:
+          - generic [ref=e26]:
+            - img "C icon" [ref=e27]
+            - generic [ref=e28]: C
+          - generic [ref=e29]:
+            - img "GitHub icon" [ref=e30]
+            - generic [ref=e31]: GitHub
+          - generic [ref=e32]:
+            - img "CSS icon" [ref=e33]
+            - generic [ref=e34]: CSS
+          - generic [ref=e35]:
+            - img "Java icon" [ref=e36]
+            - generic [ref=e37]: Java
+          - generic [ref=e38]:
+            - img "HTML icon" [ref=e39]
+            - generic [ref=e40]: HTML
+          - generic [ref=e41]:
+            - img "JavaScript icon" [ref=e42]
+            - generic [ref=e43]: JavaScript
+          - generic [ref=e44]:
+            - img "React icon" [ref=e45]
+            - generic [ref=e46]: React
+          - generic [ref=e47]:
+            - img "PostgreSQL icon" [ref=e48]
+            - generic [ref=e49]: PostgreSQL
+          - generic [ref=e50]:
+            - img "MySQL icon" [ref=e51]
+            - generic [ref=e52]: MySQL
+          - generic [ref=e53]:
+            - img "SQL Server icon" [ref=e54]
+            - generic [ref=e55]: SQL Server
+          - generic [ref=e56]:
+            - img "Docker icon" [ref=e57]
+            - generic [ref=e58]: Docker
+          - generic [ref=e59]:
+            - img "Postman icon" [ref=e60]
+            - generic [ref=e61]: Postman
+          - generic [ref=e62]:
+            - img "Cursor icon" [ref=e63]
+            - generic [ref=e64]: Cursor
+          - generic [ref=e65]:
+            - img "VS Code icon" [ref=e66]
+            - generic [ref=e67]: VS Code
+          - generic [ref=e68]:
+            - img "IntelliJ IDEA icon" [ref=e69]
+            - generic [ref=e70]: IntelliJ IDEA
+          - generic [ref=e71]:
+            - img "Swagger icon" [ref=e72]
+            - generic [ref=e73]: Swagger
+          - generic [ref=e74]:
+            - img "Redis icon" [ref=e75]
+            - generic [ref=e76]: Redis
+          - generic [ref=e77]:
+            - img "JUnit icon" [ref=e78]
+            - generic [ref=e79]: JUnit
+          - generic [ref=e80]:
+            - img "RabbitMQ icon" [ref=e81]
+            - generic [ref=e82]: RabbitMQ
+          - generic [ref=e83]:
+            - img "PHP icon" [ref=e84]
+            - generic [ref=e85]: PHP
+      - generic [ref=e86]:
+        - generic [ref=e87]:
+          - generic [ref=e88]:
+            - img "check icon" [ref=e89]
+            - heading "Soft Skills" [level=2] [ref=e90]
+          - paragraph [ref=e91]: Excellent communication, collaboration, and problem-solving skills, with a proactive and eager-to-learn attitude that adapts easily to a dynamic team environment.
+        - generic [ref=e92]:
+          - paragraph [ref=e94]: Professional Communication
+          - paragraph [ref=e96]: Effective Time Management
+          - paragraph [ref=e98]: Reliable
+          - paragraph [ref=e100]: Eager to Learn
+  - generic [ref=e102]:
+    - generic [ref=e103]:
+      - heading "Hands-On Projects" [level=1] [ref=e104]
+      - paragraph [ref=e105]: This collection of academic and practice projects has helped me strengthen and refine my technical skills as well as my ability to solve problems creatively.
+    - generic [ref=e106]:
+      - link [ref=e107] [cursor=pointer]:
+        - /url: https://github.com/MrBuddhaCoder/flashmind_project
+        - generic [ref=e108]:
+          - img "project1" [ref=e110]
+          - generic [ref=e111]:
+            - heading "Project 1" [level=4] [ref=e112]
+            - heading "FlashMind" [level=3] [ref=e113]
+            - paragraph [ref=e114]: AI-powered flashcard application with Spaced Repetition (SM-2 algorithm)
+      - link [ref=e115] [cursor=pointer]:
+        - /url: https://github.com/MrBuddhaCoder/Ecom-Frontend-thesis-project-2025.1
+        - generic [ref=e116]:
+          - img "project2" [ref=e118]
+          - generic [ref=e119]:
+            - heading "Project 2" [level=4] [ref=e120]
+            - heading "TechZone Laptop — E-commerce Frontend" [level=3] [ref=e121]
+            - paragraph [ref=e122]: A modern, full-featured e-commerce frontend for a laptop retail platform, built with React 19, Redux Toolkit, and Tailwind CSS v4. This application is the client-facing layer of a microservices-based graduation thesis project.
+      - link [ref=e123] [cursor=pointer]:
+        - /url: https://github.com/MrBuddhaCoder/graduation-thesis-microservice-laptop-ecommerce-2
+        - generic [ref=e124]:
+          - img "project2" [ref=e126]
+          - generic [ref=e127]:
+            - heading "Project 2" [level=4] [ref=e128]
+            - heading "Laptop E-Commerce Platform — Microservices Architecture" [level=3] [ref=e129]
+            - paragraph [ref=e130]: A full-stack laptop e-commerce platform built with Spring Boot 3.5, Spring Cloud 2025, and React, following a microservices architecture pattern. The system supports multi-role users (Customer, Seller, Admin), product catalog with technical specifications, shopping cart, Stripe-powered checkout, and asynchronous email notifications.
+      - link [ref=e131] [cursor=pointer]:
+        - /url: https://github.com/MrBuddhaCoder/Auth-service-oauth2-refreshtoken
+        - generic [ref=e132]:
+          - img "project3" [ref=e134]
+          - generic [ref=e135]:
+            - heading "Project 3" [level=4] [ref=e136]
+            - heading "Auth Service" [level=3] [ref=e137]
+      - link [ref=e138] [cursor=pointer]:
+        - /url: https://github.com/MrBuddhaCoder/vietbank-digital_springboot_VTI_final_project_DTN_2504
+        - generic [ref=e139]:
+          - img "project4" [ref=e141]
+          - generic [ref=e142]:
+            - heading "Project 4" [level=4] [ref=e143]
+            - heading "VietBank Digital" [level=3] [ref=e144]
+      - link [ref=e145] [cursor=pointer]:
+        - /url: https://github.com/MrBuddhaCoder/Dormitory-Management-System
+        - generic [ref=e146]:
+          - img "project5" [ref=e148]
+          - generic [ref=e149]:
+            - heading "Project 5" [level=4] [ref=e150]
+            - heading "Dormitory Management System" [level=3] [ref=e151]
+      - link [ref=e152] [cursor=pointer]:
+        - /url: https://github.com/MrBuddhaCoder/LaptopShop-Full-Stack-E-Commerce-Web-Application
+        - generic [ref=e153]:
+          - img "project6" [ref=e155]
+          - generic [ref=e156]:
+            - heading "Project 6" [level=4] [ref=e157]
+            - heading "LaptopShop – Full-Stack E-Commerce Web Application" [level=3] [ref=e158]
+      - link [ref=e159] [cursor=pointer]:
+        - /url: https://github.com/MrBuddhaCoder/vti-vmall-project-main-tunk
+        - generic [ref=e160]:
+          - img "project7" [ref=e162]
+          - generic [ref=e163]:
+            - heading "Project 7" [level=4] [ref=e164]
+            - heading "VTI VMall Project" [level=3] [ref=e165]
+      - link [ref=e166] [cursor=pointer]:
+        - /url: https://github.com/thaivanlam/Assignment-Cloud-Instance-Monitoring-System-REST-API-Design-Implementation-backend.git
+        - generic [ref=e167]:
+          - img "project8" [ref=e169]
+          - generic [ref=e170]:
+            - heading "Project 8" [level=4] [ref=e171]
+            - heading "TechValley - Cloud Instance Monitoring System" [level=3] [ref=e172]
+            - paragraph [ref=e173]: Internal monitoring system replacing manual Excel tracking of cloud instances for 10 client companies. Built for the TechValley Developer Track assignment.
+  - contentinfo [ref=e174]:
+    - paragraph [ref=e176]: © thaivanlam's Portfolio
