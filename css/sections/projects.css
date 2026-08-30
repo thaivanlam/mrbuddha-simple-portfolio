@@ -74,3 +74,36 @@
         overflow: hidden;
     }
 }
+
+.projects__cards_tech {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid hsla(var(--p-700-code), 0.12);
+
+    & h5 {
+        font-size: var(--caption-font-size);
+        line-height: var(--caption-line-height);
+        text-transform: uppercase;
+        letter-spacing: var(--p-letter-spacing);
+        color: var(--n-500);
+    }
+}
+
+.projects__cards_tech_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.projects__cards_tech_list li {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: hsla(var(--p-500-code), 0.1);
+    color: var(--p-800);
+    white-space: nowrap;
+}
