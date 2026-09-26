@@ -28,6 +28,7 @@ jobs:
           EMAILJS_PUBLIC_KEY: ${{ secrets.EMAILJS_PUBLIC_KEY }}
           EMAILJS_SERVICE_ID: ${{ secrets.EMAILJS_SERVICE_ID }}
           EMAILJS_TEMPLATE_ID: ${{ secrets.EMAILJS_TEMPLATE_ID }}
+          RECAPTCHA_SITE_KEY: ${{ secrets.RECAPTCHA_SITE_KEY }}
         run: |
           mkdir _site
           cp -r index.html css js assets _site/
@@ -35,6 +36,7 @@ jobs:
             -e "s|__EMAILJS_PUBLIC_KEY__|${EMAILJS_PUBLIC_KEY}|" \
             -e "s|__EMAILJS_SERVICE_ID__|${EMAILJS_SERVICE_ID}|" \
             -e "s|__EMAILJS_TEMPLATE_ID__|${EMAILJS_TEMPLATE_ID}|" \
+            -e "s|__RECAPTCHA_SITE_KEY__|${RECAPTCHA_SITE_KEY}|" \
             _site/js/main.js
 
       - uses: actions/configure-pages@v5

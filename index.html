@@ -20,6 +20,7 @@
 
     <link rel="stylesheet" href="css/main.css" />
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
     <script src="js/main.js" defer></script>
   </head>
   <body>
@@ -488,6 +489,7 @@
         <span class="discuss__icon"><img src="./assets/figma/sms.svg" alt="" width="32" height="32" /></span>
         <label class="visually-hidden" for="discuss-email">Your email address</label>
         <input id="discuss-email" type="email" name="email" placeholder="Enter Email Address" required />
+        <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <button type="submit" class="solid-btn">Send</button>
       </form>
 
@@ -564,6 +566,7 @@
           <form class="footer__form" data-mail-form>
             <label class="visually-hidden" for="footer-email">Your email address</label>
             <input id="footer-email" type="email" name="email" placeholder="Email Address" required />
+            <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <button type="submit" aria-label="Send">
               <img src="./assets/figma/send.svg" alt="" width="24" height="24" />
             </button>

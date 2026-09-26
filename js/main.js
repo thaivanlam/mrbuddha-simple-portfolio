@@ -9,6 +9,11 @@ const EMAILJS = {
   templateId: "__EMAILJS_TEMPLATE_ID__",
 };
 
+// Invisible reCAPTCHA v2 site key (public by design), injected the same way.
+// The matching secret key lives in the EmailJS template settings.
+const RECAPTCHA_SITE_KEY = "__RECAPTCHA_SITE_KEY__";
+const SEND_COOLDOWN_MS = 60 * 1000;
+
 /* ---------- Nav: highlight the section in view ---------- */
 const navLinks = document.querySelectorAll(".nav__link");
 const sectionObserver = new IntersectionObserver(
@@ -139,21 +144,93 @@ function openMailApp(email) {
   window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
 }
 
-document.querySelectorAll("[data-mail-form]").forEach((form) =>
+/* Cooldown: remember the last send so the forms can't be spammed from one browser */
+function getLastSentAt() {
+  try {
+    return Number(localStorage.getItem("lastEmailSentAt")) || 0;
+  } catch {
+    return 0;
+  }
+}
+
+function setLastSentAt() {
+  try {
+    localStorage.setItem("lastEmailSentAt", String(Date.now()));
+  } catch {
+    // storage unavailable (private mode) — the cooldown just won't persist
+  }
+}
+
+/* reCAPTCHA: one shared invisible widget, rendered on first use */
+const recaptchaEnabled = !RECAPTCHA_SITE_KEY.startsWith("__");
+let recaptchaWidgetId = null;
+let recaptchaPending = null;
+
+function settleRecaptcha(method, value) {
+  if (!recaptchaPending) return;
+  const pending = recaptchaPending;
+  recaptchaPending = null;
+  clearTimeout(pending.timer);
+  pending[method](value);
+}
+
+function getRecaptchaToken() {
+  return new Promise((resolve, reject) => {
+    if (!window.grecaptcha) return reject(new Error("reCAPTCHA failed to load"));
+    grecaptcha.ready(() => {
+      if (recaptchaWidgetId === null) {
+        const container = document.createElement("div");
+        document.body.append(container);
+        recaptchaWidgetId = grecaptcha.render(container, {
+          sitekey: RECAPTCHA_SITE_KEY,
+          size: "invisible",
+          badge: "bottomleft",
+          callback: (token) => settleRecaptcha("resolve", token),
+          "expired-callback": () => settleRecaptcha("reject", new Error("reCAPTCHA expired")),
+          "error-callback": () => settleRecaptcha("reject", new Error("reCAPTCHA error")),
+        });
+      }
+      settleRecaptcha("reject", new Error("reCAPTCHA superseded"));
+      // the challenge popup has no close callback, so give up after a while
+      const timer = setTimeout(() => settleRecaptcha("reject", new Error("reCAPTCHA timed out")), 2 * 60 * 1000);
+      recaptchaPending = { resolve, reject, timer };
+      grecaptcha.reset(recaptchaWidgetId);
+      grecaptcha.execute(recaptchaWidgetId);
+    });
+  });
+}
+
+document.querySelectorAll("[data-mail-form]").forEach((form) => {
+  const input = form.elements.email;
+  input.addEventListener("input", () => input.setCustomValidity(""));
+
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const input = form.elements.email;
     const button = form.querySelector("button");
     const email = input.value.trim();
+
+    // honeypot filled in: a bot — pretend it worked and send nothing
+    if (form.elements.website.value) {
+      form.reset();
+      input.placeholder = "Thanks! I'll get back to you soon.";
+      return;
+    }
+
     if (!emailjsReady) return openMailApp(email);
+
+    const waitMs = getLastSentAt() + SEND_COOLDOWN_MS - Date.now();
+    if (waitMs > 0) {
+      input.setCustomValidity(`Please wait ${Math.ceil(waitMs / 1000)}s before sending again.`);
+      input.reportValidity();
+      return;
+    }
 
     button.disabled = true;
     try {
-      await emailjs.send(EMAILJS.serviceId, EMAILJS.templateId, {
-        reply_to: email,
-        from_email: email,
-        page: location.href,
-      });
+      const params = { reply_to: email, from_email: email, page: location.href };
+      if (recaptchaEnabled) params["g-recaptcha-response"] = await getRecaptchaToken();
+      await emailjs.send(EMAILJS.serviceId, EMAILJS.templateId, params);
+      setLastSentAt();
       form.reset();
       input.placeholder = "Thanks! I'll get back to you soon.";
     } catch (error) {
@@ -162,8 +239,8 @@ document.querySelectorAll("[data-mail-form]").forEach((form) =>
     } finally {
       button.disabled = false;
     }
-  })
-);
+  });
+});
 
 document.querySelectorAll("[data-year]").forEach((el) => {
   el.textContent = new Date().getFullYear();

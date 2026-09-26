@@ -89,6 +89,15 @@ input {
   white-space: nowrap;
 }
 
+/* spam trap: hidden from people, bots tend to fill it in */
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
 /* ==========================================================
    Shared pieces
    ========================================================== */
