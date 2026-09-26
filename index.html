@@ -3,576 +3,576 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>thaivanlam Simple Portfolio</title>
-
-    <link rel="stylesheet" href="css/main.css" />
-
-    <link rel="stylesheet" href="css/responsive.css" />
+    <title>Thái Văn Lâm — Software Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Thái Văn Lâm, entry-level backend developer (Java, Spring Boot, microservices)."
+    />
 
     <link rel="icon" href="./assets/rocket-icon.ico" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Outfit:wght@300;400;500;600;700&family=Urbanist:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/main.js" defer></script>
   </head>
   <body>
-    <!--------------- 
-      Header
+    <!---------------
+      Navigation
     ----------------->
-    <header>
-      <div class="container header__container">
-        <!-- left column -->
-        <div class="header__column--left">
-          <!-- avatar -->
-          <div class="header__img"></div>
+    <nav class="nav" aria-label="Main">
+      <div class="nav__bar">
+        <a href="#home" class="nav__link is-active">Home</a>
+        <a href="#skills" class="nav__link">Skills</a>
+        <a href="#journey" class="nav__link">Journey</a>
+        <a href="#home" class="nav__logo logo" aria-label="Thái Văn Lâm — home">
+          <span class="logo__mark">TL</span>
+          <span class="logo__text">LAMTV</span>
+        </a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </div>
+    </nav>
 
-          <div class="header__content--left">
-            <h2 class="header__title">Thái Văn Lâm</h2>
-            <div class="header__badge_container">
-              <div class="badge">Software Engineer</div>
-            </div>
-            <p>
-              Seeking a <span>Fresher Job</span> position in software
-              development.
-            </p>
-          </div>
+    <!---------------
+      Hero
+    ----------------->
+    <header class="hero" id="home">
+      <div class="hero__heading">
+        <span class="hero__hello">
+          Hello!
+          <img src="./assets/figma/hello-spark.svg" alt="" class="hero__hello_spark" width="31.5" height="32.5" />
+        </span>
+        <h1 class="hero__title">
+          I’m <span class="text-accent">Lâm</span>,<br />
+          Software Engineer
+        </h1>
+        <img src="./assets/figma/hero-doodle.svg" alt="" class="hero__doodle" width="76.89" height="79.5" />
+      </div>
+
+      <div class="hero__quote">
+        <img src="./assets/figma/quote-up.svg" alt="" width="36" height="36" />
+        <p>
+          Entry-level Backend Developer<br />
+          building reliable REST APIs<br />
+          with Java &amp; Spring Boot.
+        </p>
+      </div>
+
+      <div class="hero__stat">
+        <div class="hero__stars" aria-hidden="true">
+          <img src="./assets/figma/star.svg" alt="" width="26.67" height="25.34" />
+          <img src="./assets/figma/star.svg" alt="" width="26.67" height="25.34" />
+          <img src="./assets/figma/star.svg" alt="" width="26.67" height="25.34" />
+          <img src="./assets/figma/star.svg" alt="" width="26.67" height="25.34" />
+          <img src="./assets/figma/star.svg" alt="" width="26.67" height="25.34" />
         </div>
+        <strong>9+ Projects</strong>
+        <span>Hands-on</span>
+      </div>
 
-        <!-- right column -->
-        <!-- <div class="header__column--right">
-          <h2 class="header__title">Contact Information</h2>
-          <p>
-            Email me at:
-            <span>thaivanlam373@gmail.com</span>
-          </p>
-          <p>
-            Call me at:
-            <span>0974562318</span>
-          </p>
-        </div> -->
+      <div class="hero__visual">
+        <img src="./assets/figma/hero-circle.svg" alt="" class="hero__circle" width="811.78" height="405.89" />
+        <img src="./assets/avatar.jpg" alt="Portrait sketch of Thái Văn Lâm" class="hero__avatar" />
+      </div>
+
+      <div class="hero__cta">
+        <a href="#projects" class="pill-btn pill-btn--primary">
+          Portfolio
+          <img src="./assets/figma/arrow-up-right.svg" alt="" width="42" height="42" />
+        </a>
+        <a href="#contact" class="pill-btn pill-btn--ghost">Hire me</a>
       </div>
     </header>
 
-    <!--------------------------------- 
-      Skills
-    ----------------------------------->
-    <section class="skills__section">
-      <div class="container skills__container">
-        <!-- header -->
-        <div class="section__header">
-          <h1 class="section__title">Skills &amp; Expertise</h1>
+    <!---------------
+      Skills (design: "My Services")
+    ----------------->
+    <section class="dark-panel skills" id="skills">
+      <div class="dark-panel__shapes" aria-hidden="true">
+        <img src="./assets/figma/shape-3d.png" alt="" class="shape shape--big" />
+        <img src="./assets/figma/shape-3d.png" alt="" class="shape shape--small" />
+        <img src="./assets/figma/shape-3d.png" alt="" class="shape shape--left" />
+      </div>
 
-          <p class="section__description">
-            Entry-level Backend Developer with hands-on experience in Java,
-            Spring Boot, MySQL, and RESTful API development. Familiar with
-            database design, Git, and object-oriented programming principles.
-            Passionate about backend development and continuously improving
-            technical skills through personal projects and learning.
-          </p>
-        </div>
+      <div class="section-head section-head--split">
+        <h2 class="section-head__title section-head__title--light">
+          My <span class="text-accent">Skills</span>
+        </h2>
+        <p class="section-head__text">
+          Hands-on experience in Java, Spring Boot, MySQL and RESTful API
+          development. Familiar with database design, Git and object-oriented
+          programming.
+        </p>
+      </div>
 
-        <!-- grid -->
-        <div class="skills__grid_container">
-          <!-- grid item 1 -->
-          <div class="skills__grid_item">
-            <div class="skills__grid_item_header">
-              <div>
-                <img src="./assets/check-icon.svg" alt="check-icon" />
-                <h2>Tools &amp; Technologies</h2>
-              </div>
-              <p>
-                Proficient in Java Spring Boot and React/Redux, with practical
-                experience architecting microservices systems, integrating
-                message queues (RabbitMQ), and containerizing applications with
-                Docker. Committed to clean code principles and building
-                reliable, user-friendly applications.
-              </p>
+      <div class="carousel" data-carousel>
+        <div class="carousel__track skills__track" data-carousel-track>
+          <article class="skill-card">
+            <h3 class="skill-card__title">Backend Development</h3>
+            <div class="skill-card__screen">
+              <ul class="skill-card__icons">
+                <li><img src="./assets/icons/java.svg" alt="" class="is-light" />Java</li>
+                <li><img src="./assets/icons/postgresql.svg" alt="" />PostgreSQL</li>
+                <li><img src="./assets/icons/mysql.svg" alt="" />MySQL</li>
+                <li><img src="./assets/icons/sql-server.svg" alt="" />SQL Server</li>
+                <li><img src="./assets/icons/redis.svg" alt="" />Redis</li>
+                <li><img src="./assets/icons/rabbitmq.svg" alt="" />RabbitMQ</li>
+                <li><img src="./assets/icons/junit.svg" alt="" />JUnit</li>
+                <li><img src="./assets/icons/swagger.svg" alt="" />Swagger</li>
+                <li><img src="./assets/icons/php.svg" alt="" />PHP</li>
+              </ul>
             </div>
+            <a href="#projects" class="skill-card__arrow" aria-label="See backend projects">
+              <img src="./assets/figma/service-arrow.svg" alt="" width="72" height="72" />
+            </a>
+          </article>
 
-            <!-- skill logos -->
+          <article class="skill-card">
+            <h3 class="skill-card__title">Frontend Development</h3>
+            <div class="skill-card__screen">
+              <ul class="skill-card__icons">
+                <li><img src="./assets/icons/react.svg" alt="" />React</li>
+                <li><img src="./assets/icons/JS.svg" alt="" />JavaScript</li>
+                <li><img src="./assets/icons/html.svg" alt="" />HTML</li>
+                <li><img src="./assets/icons/css.svg" alt="" />CSS</li>
+                <li><img src="./assets/icons/C.svg" alt="" />C</li>
+              </ul>
+            </div>
+            <a href="#projects" class="skill-card__arrow" aria-label="See frontend projects">
+              <img src="./assets/figma/service-arrow.svg" alt="" width="72" height="72" />
+            </a>
+          </article>
+
+          <article class="skill-card">
+            <h3 class="skill-card__title">DevOps &amp; Tools</h3>
+            <div class="skill-card__screen">
+              <ul class="skill-card__icons">
+                <li><img src="./assets/icons/docker.svg" alt="" />Docker</li>
+                <li><img src="./assets/icons/github.svg" alt="" class="is-light" />GitHub</li>
+                <li><img src="./assets/icons/postman.svg" alt="" />Postman</li>
+                <li><img src="./assets/icons/intellij.svg" alt="" />IntelliJ</li>
+                <li><img src="./assets/icons/vscode.svg" alt="" />VS Code</li>
+                <li><img src="./assets/icons/cursor.svg" alt="" />Cursor</li>
+              </ul>
+            </div>
+            <a href="#projects" class="skill-card__arrow" aria-label="See projects using these tools">
+              <img src="./assets/figma/service-arrow.svg" alt="" width="72" height="72" />
+            </a>
+          </article>
+        </div>
+        <div class="dots dots--dark" data-carousel-dots></div>
+      </div>
+    </section>
+
+    <!---------------
+      Journey (design: "My Work Experience")
+    ----------------->
+    <section class="journey" id="journey">
+      <h2 class="section-head__title journey__title">
+        My <span class="text-accent">Learning Journey</span>
+      </h2>
+
+      <ol class="timeline">
+        <li class="timeline__row">
+          <div class="timeline__where">
+            <h3>VTI Academy</h3>
+            <p>Java Backend Training</p>
+          </div>
+          <img src="./assets/figma/timeline-dot-orange.svg" alt="" class="timeline__dot" width="50" height="50" />
+          <div class="timeline__what">
+            <h3>Java Backend Trainee</h3>
+            <p>
+              Spring Boot, RESTful APIs and database design. Final project:
+              VietBank Digital, plus the VTI VMall team project.
+            </p>
+          </div>
+        </li>
+        <li class="timeline__row">
+          <div class="timeline__where">
+            <h3>TechValley</h3>
+            <p>Developer Track</p>
+          </div>
+          <img src="./assets/figma/timeline-dot-dark.svg" alt="" class="timeline__dot" width="50" height="50" />
+          <div class="timeline__what">
+            <h3>Backend Developer</h3>
+            <p>
+              Built a Cloud Instance Monitoring System with FastAPI to replace
+              manual Excel tracking for 10 client companies.
+            </p>
+          </div>
+        </li>
+        <li class="timeline__row">
+          <div class="timeline__where">
+            <h3>Personal Projects</h3>
+            <p>Ongoing</p>
+          </div>
+          <img src="./assets/figma/timeline-dot-orange.svg" alt="" class="timeline__dot" width="50" height="50" />
+          <div class="timeline__what">
+            <h3>Microservices &amp; Systems</h3>
+            <p>
+              Techzone microservices e-commerce, FlashMind AI flashcards and a
+              Go payment gateway with a double-entry ledger.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!---------------
+      About (design: "Why Hire me?")
+    ----------------->
+    <section class="about" id="about">
+      <div class="about__visual">
+        <div class="about__shape"></div>
+        <img src="./assets/avatar.jpg" alt="" class="about__avatar" />
+      </div>
+
+      <div class="about__content">
+        <h2 class="section-head__title">
+          Why <span class="text-accent">Hire me</span>?
+        </h2>
+        <p class="about__text">
+          I’m a backend-focused fresher who learns by shipping: microservices
+          with Spring Cloud, message queues, containerized deployments and clean,
+          tested code. Eager to grow inside a real product team.
+        </p>
+        <div class="about__stats">
+          <div>
+            <strong>9+</strong>
+            <span>Projects Completed</span>
+          </div>
+          <div>
+            <strong>20+</strong>
+            <span>Technologies Used</span>
+          </div>
+        </div>
+        <a href="#contact" class="outline-btn">Hire me</a>
+      </div>
+    </section>
+
+    <!---------------
+      Projects (design: "Lets have a look at my Portfolio")
+    ----------------->
+    <section class="portfolio" id="projects">
+      <div class="section-head section-head--split section-head--center">
+        <h2 class="section-head__title portfolio__title">
+          Lets have a look at my <span class="text-accent">Portfolio</span>
+        </h2>
+        <a href="https://github.com/thaivanlam?tab=repositories" target="_blank" rel="noopener noreferrer" class="solid-btn">See All</a>
+      </div>
+
+      <div class="carousel" data-carousel data-portfolio>
+        <div class="carousel__track portfolio__track" data-carousel-track>
+          <a class="project" data-cat="java fullstack" href="https://github.com/thaivanlam/flashmind_project" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/project.jpg" alt="" class="project__img" loading="lazy" />
+            <span class="project__arrow"><img src="./assets/figma/arrow-right-light.svg" alt="" width="34" height="34" /></span>
+            <span class="project__name">FlashMind</span>
+            <div class="project__info" hidden>
+              <h3>FlashMind – AI Flashcards</h3>
+              <p>AI-powered flashcard application with Spaced Repetition (SM-2 algorithm).</p>
+              <ul><li>Java 25</li><li>Spring Boot 3.5</li><li>Spring Security + JWT</li><li>Spring Data JPA</li><li>PostgreSQL</li><li>Redis</li><li>Anthropic Java SDK</li><li>React 19</li><li>TypeScript</li><li>Vite</li><li>Redux Toolkit</li><li>Tailwind CSS</li><li>Docker</li></ul>
+            </div>
+          </a>
+
+          <a class="project" data-cat="java microservices fullstack" href="https://github.com/thaivanlam/Techzone-laptop-project" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/project2.jpg" alt="" class="project__img" loading="lazy" />
+            <span class="project__arrow"><img src="./assets/figma/arrow-right-light.svg" alt="" width="34" height="34" /></span>
+            <span class="project__name">Techzone</span>
+            <div class="project__info" hidden>
+              <h3>Techzone – Laptop E-Commerce</h3>
+              <p>Microservices e-commerce platform with multi-role users (Customer, Seller, Admin), product specs, cart, Stripe checkout and async email notifications.</p>
+              <ul><li>Spring Boot 3.5</li><li>Spring Cloud 2025</li><li>Eureka</li><li>API Gateway</li><li>JWT</li><li>RabbitMQ</li><li>Stripe</li><li>React 19</li><li>Redux Toolkit</li><li>Vite</li><li>MUI</li><li>Chart.js</li><li>Docker</li><li>Nginx</li><li>Prometheus</li><li>Grafana</li></ul>
+            </div>
+          </a>
+
+          <a class="project" data-cat="go" href="https://github.com/thaivanlam/mini-payment-gateway" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/project1.jpg" alt="" class="project__img" loading="lazy" />
+            <span class="project__arrow"><img src="./assets/figma/arrow-right-light.svg" alt="" width="34" height="34" /></span>
+            <span class="project__name">PayGateway</span>
+            <div class="project__info" hidden>
+              <h3>Mini Payment Gateway</h3>
+              <p>Payment gateway in Go with a double-entry ledger, idempotent REST API, circuit-broken acquirer and HMAC-signed webhooks.</p>
+              <ul><li>Go 1.22</li><li>PostgreSQL</li><li>Redis</li><li>REST API</li><li>HMAC Signing</li><li>Idempotency</li><li>Circuit Breaker</li><li>Webhooks</li><li>Docker</li></ul>
+            </div>
+          </a>
+
+          <a class="project" data-cat="python" href="https://github.com/thaivanlam/Assignment-Cloud-Instance-Monitoring-System-REST-API-Design-Implementation-backend.git" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/project3.jpg" alt="" class="project__img" loading="lazy" />
+            <span class="project__arrow"><img src="./assets/figma/arrow-right-light.svg" alt="" width="34" height="34" /></span>
+            <span class="project__name">TechValley</span>
+            <div class="project__info" hidden>
+              <h3>TechValley – Cloud Monitoring</h3>
+              <p>Internal monitoring system replacing manual Excel tracking of cloud instances for 10 client companies. Built for the TechValley Developer Track assignment.</p>
+              <ul><li>Python</li><li>FastAPI</li><li>SQLAlchemy</li><li>SQLite</li><li>Pydantic v2</li><li>PyJWT</li><li>Swagger / OpenAPI</li><li>Anthropic Claude</li></ul>
+            </div>
+          </a>
+
+          <a class="project" data-cat="java" href="https://github.com/thaivanlam/Auth-service-oauth2-refreshtoken" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/project4.jpg" alt="" class="project__img" loading="lazy" />
+            <span class="project__arrow"><img src="./assets/figma/arrow-right-light.svg" alt="" width="34" height="34" /></span>
+            <span class="project__name">Auth Service</span>
+            <div class="project__info" hidden>
+              <h3>Auth Service</h3>
+              <p>Authentication service with an OAuth2 resource server, JWT, refresh-token rotation and role-based access control.</p>
+              <ul><li>Spring Boot 3.2</li><li>Spring Security 6</li><li>OAuth2 Resource Server</li><li>JWT</li><li>Refresh Token Rotation</li><li>RBAC</li><li>Swagger UI</li></ul>
+            </div>
+          </a>
+
+          <a class="project" data-cat="java" href="https://github.com/thaivanlam/vietbank-digital_springboot_VTI_final_project_DTN_2504" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/project5.jpg" alt="" class="project__img" loading="lazy" />
+            <span class="project__arrow"><img src="./assets/figma/arrow-right-light.svg" alt="" width="34" height="34" /></span>
+            <span class="project__name">VietBank</span>
+            <div class="project__info" hidden>
+              <h3>VietBank Digital</h3>
+              <p>Digital banking backend built with Spring Boot as the VTI final project.</p>
+              <ul><li>Java</li><li>Spring Boot</li><li>RESTful API</li><li>Maven / Gradle</li><li>Git</li></ul>
+            </div>
+          </a>
+
+          <a class="project" data-cat="java fullstack" href="https://github.com/thaivanlam/LaptopShop-Full-Stack-E-Commerce-Web-Application" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/project6.jpg" alt="" class="project__img" loading="lazy" />
+            <span class="project__arrow"><img src="./assets/figma/arrow-right-light.svg" alt="" width="34" height="34" /></span>
+            <span class="project__name">LaptopShop</span>
+            <div class="project__info" hidden>
+              <h3>LaptopShop – Full-Stack E-Commerce</h3>
+              <p>Server-rendered e-commerce web application with Spring MVC, Spring Security and JSP.</p>
+              <ul><li>Java 17</li><li>Spring Boot</li><li>Spring MVC</li><li>Spring Security</li><li>Spring Data JPA</li><li>Hibernate</li><li>MySQL</li><li>JSP / JSTL</li><li>Maven</li></ul>
+            </div>
+          </a>
+
+          <a class="project" data-cat="php" href="https://github.com/thaivanlam/Dormitory-Management-System" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/project.jpg" alt="" class="project__img" loading="lazy" />
+            <span class="project__arrow"><img src="./assets/figma/arrow-right-light.svg" alt="" width="34" height="34" /></span>
+            <span class="project__name">Dormitory</span>
+            <div class="project__info" hidden>
+              <h3>Dormitory Management System</h3>
+              <p>PHP &amp; MySQL web application for managing dormitory rooms and residents.</p>
+              <ul><li>PHP 7+</li><li>MySQL / MariaDB</li><li>JavaScript</li><li>SCSS</li><li>Less</li><li>CSS</li><li>Apache / Nginx</li></ul>
+            </div>
+          </a>
+
+          <a class="project" data-cat="java" href="https://github.com/thaivanlam/vti-vmall-project-main-tunk" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/project2.jpg" alt="" class="project__img" loading="lazy" />
+            <span class="project__arrow"><img src="./assets/figma/arrow-right-light.svg" alt="" width="34" height="34" /></span>
+            <span class="project__name">VMall</span>
+            <div class="project__info" hidden>
+              <h3>VTI VMall</h3>
+              <p>Online mall project built with Spring Boot during the VTI program.</p>
+              <ul><li>Java</li><li>Spring Boot</li><li>Maven</li><li>HTML</li></ul>
+            </div>
+          </a>
+        </div>
+        <div class="dots" data-carousel-dots></div>
+      </div>
+
+      <div class="chips" role="group" aria-label="Filter projects">
+        <button type="button" class="chip is-active" data-filter="all">All</button>
+        <button type="button" class="chip" data-filter="java">Spring Boot</button>
+        <button type="button" class="chip" data-filter="microservices">Microservices</button>
+        <button type="button" class="chip" data-filter="fullstack">Full-stack</button>
+        <button type="button" class="chip" data-filter="go">Go</button>
+        <button type="button" class="chip" data-filter="python">Python</button>
+        <button type="button" class="chip" data-filter="php">PHP</button>
+      </div>
+
+      <div class="portfolio__detail" aria-live="polite">
+        <div class="portfolio__detail_head">
+          <h3 data-detail-title>FlashMind – AI Flashcards</h3>
+          <a href="https://github.com/thaivanlam/flashmind_project" target="_blank" rel="noopener noreferrer" class="round-link" data-detail-link aria-label="Open on GitHub">
+            <img src="./assets/figma/arrow-down-right.svg" alt="" width="34" height="34" />
+          </a>
+        </div>
+        <p data-detail-text>AI-powered flashcard application with Spaced Repetition (SM-2 algorithm).</p>
+        <ul class="tag-list" data-detail-tags></ul>
+      </div>
+    </section>
+
+    <!---------------
+      Soft skills (design: "Testimonials")
+    ----------------->
+    <section class="dark-panel soft">
+      <div class="soft__head">
+        <h2 class="section-head__title section-head__title--light soft__title">
+          Soft Skills That<br />
+          Shape <span class="text-accent">My Work</span>
+        </h2>
+        <p class="soft__text">
+          Excellent communication, collaboration and problem-solving skills,
+          with a proactive, eager-to-learn attitude that adapts easily to a
+          dynamic team environment.
+        </p>
+        <img src="./assets/figma/sparkle-lines.svg" alt="" class="soft__spark soft__spark--lines" width="31.5" height="32.5" />
+        <img src="./assets/figma/sparkle-star.svg" alt="" class="soft__spark soft__spark--right" width="25.56" height="25.47" />
+        <img src="./assets/figma/sparkle-star.svg" alt="" class="soft__spark soft__spark--left" width="25.56" height="25.47" />
+      </div>
+
+      <div class="soft__track" data-soft-track>
+        <article class="soft-card">
+          <img src="./assets/figma/quote-down.svg" alt="" class="soft-card__quote" width="128" height="128" />
+          <div class="soft-card__head">
+            <span class="soft-card__badge">01</span>
             <div>
-              <!-- list 2 -->
-              <div class="icons-list-wrapper">
-                <div class="icons-list">
-                  <div class="icon-badges">
-                    <img src="./assets/icons/C.svg" alt="C icon" />
-                    <span>C</span>
-                  </div>
-                  <div class="icon-badges">
-                    <img src="./assets/icons/github.svg" alt="GitHub icon" />
-                    <span>GitHub</span>
-                  </div>
-                  <div class="icon-badges">
-                    <img src="./assets/icons/css.svg" alt="CSS icon" />
-                    <span>CSS</span>
-                  </div>
-                  <div class="icon-badges">
-                    <img src="./assets/icons/java.svg" alt="Java icon" />
-                    <span>Java</span>
-                  </div>
-                  <div class="icon-badges">
-                    <img src="./assets/icons/html.svg" alt="HTML icon" />
-                    <span>HTML</span>
-                  </div>
-                  <div class="icon-badges">
-                    <img src="./assets/icons/JS.svg" alt="JavaScript icon" />
-                    <span>JavaScript</span>
-                  </div>
-                  <div class="icon-badges">
-                    <img src="./assets/icons/react.svg" alt="React icon" />
-                    <span>React</span>
-                  </div>
-                  <div class="icon-badges">
-                    <img
-                      src="./assets/icons/postgresql.svg"
-                      alt="PostgreSQL icon"
-                    />
-                    <span>PostgreSQL</span>
-                  </div>
-                  <div class="icon-badges">
-                    <img src="./assets/icons/mysql.svg" alt="MySQL icon" />
-                    <span>MySQL</span>
-                  </div>
-                  <div class="icon-badges">
-                    <img
-                      src="./assets/icons/sql-server.svg"
-                      alt="SQL Server icon"
-                    />
-                    <span>SQL Server</span>
-                  </div>
-                  <div class="icon-badges">
-                    <img src="./assets/icons/docker.svg" alt="Docker icon" />
-                    <span>Docker</span>
-                  </div>
-                  <div class="icon-badges">
-                    <img src="./assets/icons/postman.svg" alt="Postman icon" />
-                    <span>Postman</span>
-                  </div>
-                  <div class="icon-badges">
-                    <img src="./assets/icons/cursor.svg" alt="Cursor icon" />
-                    <span>Cursor</span>
-                  </div>
-                  <div class="icon-badges">
-                    <img src="./assets/icons/vscode.svg" alt="VS Code icon" />
-                    <span>VS Code</span>
-                  </div>
-                  <div class="icon-badges">
-                    <img
-                      src="./assets/icons/intellij.svg"
-                      alt="IntelliJ IDEA icon"
-                    />
-                    <span>IntelliJ IDEA</span>
-                  </div>
-                  <div class="icon-badges">
-                    <img src="./assets/icons/swagger.svg" alt="Swagger icon" />
-                    <span>Swagger</span>
-                  </div>
-                  <div class="icon-badges">
-                    <img src="./assets/icons/redis.svg" alt="Redis icon" />
-                    <span>Redis</span>
-                  </div>
-                  <div class="icon-badges">
-                    <img src="./assets/icons/junit.svg" alt="JUnit icon" />
-                    <span>JUnit</span>
-                  </div>
-                  <div class="icon-badges">
-                    <img
-                      src="./assets/icons/rabbitmq.svg"
-                      alt="RabbitMQ icon"
-                    />
-                    <span>RabbitMQ</span>
-                  </div>
-                  <div class="icon-badges">
-                    <img src="./assets/icons/php.svg" alt="PHP icon" />
-                    <span>PHP</span>
-                  </div>
-                </div>
-              </div>
+              <h3>Professional Communication</h3>
+              <p>Team player</p>
             </div>
           </div>
-
-          <!-- grid item 3 -->
-          <div class="skills__grid_item">
-            <div class="skills__grid_item_header">
-              <div>
-                <img src="./assets/check-icon.svg" alt="check icon" />
-                <h2>Soft Skills</h2>
-              </div>
-              <p>
-                Excellent communication, collaboration, and problem-solving
-                skills, with a proactive and eager-to-learn attitude that adapts
-                easily to a dynamic team environment.
-              </p>
-            </div>
-
-            <div class="softSkills__container">
-              <div class="softSkills_badge">
-                <p>Professional Communication</p>
-              </div>
-
-              <div class="softSkills_badge">
-                <p>Effective Time Management</p>
-              </div>
-              <div class="softSkills_badge">
-                <p>Reliable</p>
-              </div>
-              <div class="softSkills_badge">
-                <p>Eager to Learn</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- grid item 4 -->
-        </div>
-      </div>
-    </section>
-
-    <!--------------------------------- 
-      Projects
-    ----------------------------------->
-    <section class="projects__section" id="ProjectContainer">
-      <div class="container projects_container">
-        <!-- header -->
-        <div class="section__header">
-          <h1 class="section__title">Hands-On Projects</h1>
-          <p class="section__description">
-            This collection of academic and practice projects has helped me
-            strengthen and refine my technical skills as well as my ability to
-            solve problems creatively.
+          <p class="soft-card__text">
+            I explain technical decisions clearly, document APIs so others can
+            use them without asking, and keep teammates in the loop on progress
+            and blockers.
           </p>
-        </div>
-
-        <!-- cards -->
-        <div class="projects__cards_container">
-          <a
-            href="https://github.com/thaivanlam/flashmind_project"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="projects_cards">
-              <div class="projects__cards_wrapper">
-                <img
-                  src="./assets/project.jpg"
-                  alt="project1"
-                  class="projects__cards_img"
-                />
-              </div>
-              <div class="projects__cards_titles">
-                <h4>Project 1</h4>
-                <h3>FlashMind</h3>
-                <p>
-                  AI-powered flashcard application with Spaced Repetition (SM-2
-                  algorithm)
-                </p>
-                <div class="projects__cards_tech">
-                  <h5>Tech Stack</h5>
-                  <ul class="projects__cards_tech_list">
-                    <li>Java 25</li>
-                    <li>Spring Boot 3.5</li>
-                    <li>Spring Security + JWT</li>
-                    <li>Spring Data JPA</li>
-                    <li>PostgreSQL</li>
-                    <li>Redis</li>
-                    <li>Anthropic Java SDK</li>
-                    <li>React 19</li>
-                    <li>TypeScript</li>
-                    <li>Vite</li>
-                    <li>Redux Toolkit</li>
-                    <li>Tailwind CSS</li>
-                    <li>Docker</li>
-                  </ul>
-                </div>
-              </div>
+        </article>
+        <article class="soft-card">
+          <img src="./assets/figma/quote-down.svg" alt="" class="soft-card__quote" width="128" height="128" />
+          <div class="soft-card__head">
+            <span class="soft-card__badge">02</span>
+            <div>
+              <h3>Effective Time Management</h3>
+              <p>Organized</p>
             </div>
-          </a>
-
-          <a
-            href="https://github.com/thaivanlam/Techzone-laptop-project"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="projects_cards">
-              <div class="projects__cards_wrapper">
-                <img
-                  src="./assets/project.jpg"
-                  alt="project2"
-                  class="projects__cards_img"
-                />
-              </div>
-              <div class="projects__cards_titles">
-                <h4>Project 2</h4>
-                <h3>Techzone laptop project</h3>
-                <p>
-                  A full-stack laptop e-commerce platform built with Spring Boot
-                  3.5, Spring Cloud 2025, and React 19, following a
-                  microservices architecture pattern. The system supports
-                  multi-role users (Customer, Seller, Admin), product catalog
-                  with technical specifications, shopping cart, Stripe-powered
-                  checkout, and asynchronous email notifications.
-                </p>
-                <div class="projects__cards_tech">
-                  <h5>Tech Stack</h5>
-                  <ul class="projects__cards_tech_list">
-                    <li>Spring Boot 3.5</li>
-                    <li>Spring Cloud 2025</li>
-                    <li>Eureka</li>
-                    <li>API Gateway</li>
-                    <li>JWT</li>
-                    <li>RabbitMQ</li>
-                    <li>Stripe</li>
-                    <li>React 19</li>
-                    <li>Redux Toolkit</li>
-                    <li>Vite</li>
-                    <li>MUI</li>
-                    <li>Chart.js</li>
-                    <li>Docker</li>
-                    <li>Nginx</li>
-                    <li>Prometheus</li>
-                    <li>Grafana</li>
-                  </ul>
-                </div>
-              </div>
+          </div>
+          <p class="soft-card__text">
+            I break features into small, estimable tasks and deliver them on
+            schedule while balancing training programs and personal projects.
+          </p>
+        </article>
+        <article class="soft-card">
+          <img src="./assets/figma/quote-down.svg" alt="" class="soft-card__quote" width="128" height="128" />
+          <div class="soft-card__head">
+            <span class="soft-card__badge">03</span>
+            <div>
+              <h3>Reliable</h3>
+              <p>Ownership</p>
             </div>
-          </a>
-          <a
-            href="https://github.com/thaivanlam/Auth-service-oauth2-refreshtoken"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="projects_cards">
-              <div class="projects__cards_wrapper">
-                <img
-                  src="./assets/project.jpg"
-                  alt="project3"
-                  class="projects__cards_img"
-                />
-              </div>
-              <div class="projects__cards_titles">
-                <h4>Project 3</h4>
-                <h3>Auth Service</h3>
-                <div class="projects__cards_tech">
-                  <h5>Tech Stack</h5>
-                  <ul class="projects__cards_tech_list">
-                    <li>Spring Boot 3.2</li>
-                    <li>Spring Security 6</li>
-                    <li>OAuth2 Resource Server</li>
-                    <li>JWT</li>
-                    <li>Refresh Token Rotation</li>
-                    <li>RBAC</li>
-                    <li>Swagger UI</li>
-                  </ul>
-                </div>
-              </div>
+          </div>
+          <p class="soft-card__text">
+            I own what I commit to, from writing tests to fixing bugs after
+            release, so the team can count on my work being finished properly.
+          </p>
+        </article>
+        <article class="soft-card">
+          <img src="./assets/figma/quote-down.svg" alt="" class="soft-card__quote" width="128" height="128" />
+          <div class="soft-card__head">
+            <span class="soft-card__badge">04</span>
+            <div>
+              <h3>Eager to Learn</h3>
+              <p>Growth mindset</p>
             </div>
-          </a>
-          <a
-            href="https://github.com/thaivanlam/vietbank-digital_springboot_VTI_final_project_DTN_2504"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="projects_cards">
-              <div class="projects__cards_wrapper">
-                <img
-                  src="./assets/project.jpg"
-                  alt="project4"
-                  class="projects__cards_img"
-                />
-              </div>
-              <div class="projects__cards_titles">
-                <h4>Project 4</h4>
-                <h3>VietBank Digital</h3>
-                <div class="projects__cards_tech">
-                  <h5>Tech Stack</h5>
-                  <ul class="projects__cards_tech_list">
-                    <li>Java</li>
-                    <li>Spring Boot</li>
-                    <li>RESTful API</li>
-                    <li>Maven / Gradle</li>
-                    <li>Git</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a
-            href="https://github.com/thaivanlam/Dormitory-Management-System"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="projects_cards">
-              <div class="projects__cards_wrapper">
-                <img
-                  src="./assets/project.jpg"
-                  alt="project5"
-                  class="projects__cards_img"
-                />
-              </div>
-              <div class="projects__cards_titles">
-                <h4>Project 5</h4>
-                <h3>Dormitory Management System</h3>
-                <div class="projects__cards_tech">
-                  <h5>Tech Stack</h5>
-                  <ul class="projects__cards_tech_list">
-                    <li>PHP 7+</li>
-                    <li>MySQL / MariaDB</li>
-                    <li>JavaScript</li>
-                    <li>SCSS</li>
-                    <li>Less</li>
-                    <li>CSS</li>
-                    <li>Apache / Nginx</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a
-            href="https://github.com/thaivanlam/LaptopShop-Full-Stack-E-Commerce-Web-Application"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="projects_cards">
-              <div class="projects__cards_wrapper">
-                <img
-                  src="./assets/project.jpg"
-                  alt="project6"
-                  class="projects__cards_img"
-                />
-              </div>
-              <div class="projects__cards_titles">
-                <h4>Project 6</h4>
-                <h3>LaptopShop – Full-Stack E-Commerce Web Application</h3>
-                <div class="projects__cards_tech">
-                  <h5>Tech Stack</h5>
-                  <ul class="projects__cards_tech_list">
-                    <li>Java 17</li>
-                    <li>Spring Boot</li>
-                    <li>Spring MVC</li>
-                    <li>Spring Security</li>
-                    <li>Spring Data JPA</li>
-                    <li>Hibernate</li>
-                    <li>MySQL</li>
-                    <li>JSP / JSTL</li>
-                    <li>Maven</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a
-            href="https://github.com/thaivanlam/vti-vmall-project-main-tunk"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="projects_cards">
-              <div class="projects__cards_wrapper">
-                <img
-                  src="./assets/project.jpg"
-                  alt="project7"
-                  class="projects__cards_img"
-                />
-              </div>
-              <div class="projects__cards_titles">
-                <h4>Project 7</h4>
-                <h3>VTI VMall Project</h3>
-                <div class="projects__cards_tech">
-                  <h5>Tech Stack</h5>
-                  <ul class="projects__cards_tech_list">
-                    <li>Java</li>
-                    <li>Spring Boot</li>
-                    <li>Maven</li>
-                    <li>HTML</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a
-            href="https://github.com/thaivanlam/Assignment-Cloud-Instance-Monitoring-System-REST-API-Design-Implementation-backend.git"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="projects_cards">
-              <div class="projects__cards_wrapper">
-                <img
-                  src="./assets/project.jpg"
-                  alt="project8"
-                  class="projects__cards_img"
-                />
-              </div>
-              <div class="projects__cards_titles">
-                <h4>Project 8</h4>
-                <h3>TechValley - Cloud Instance Monitoring System</h3>
-                <p>
-                  Internal monitoring system replacing manual Excel tracking of
-                  cloud instances for 10 client companies. Built for the
-                  TechValley Developer Track assignment.
-                </p>
-                <div class="projects__cards_tech">
-                  <h5>Tech Stack</h5>
-                  <ul class="projects__cards_tech_list">
-                    <li>Python</li>
-                    <li>FastAPI</li>
-                    <li>SQLAlchemy</li>
-                    <li>SQLite</li>
-                    <li>Pydantic v2</li>
-                    <li>PyJWT</li>
-                    <li>Swagger / OpenAPI</li>
-                    <li>Anthropic Claude</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a
-            href="https://github.com/thaivanlam/mini-payment-gateway"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="projects_cards">
-              <div class="projects__cards_wrapper">
-                <img
-                  src="./assets/project1.jpg"
-                  alt="project9"
-                  class="projects__cards_img"
-                />
-              </div>
-              <div class="projects__cards_titles">
-                <h4>Project 9</h4>
-                <h3>Mini Payment Gateway</h3>
-                <p>
-                  Payment gateway in Go with a double-entry ledger, idempotent
-                  REST API, circuit-broken acquirer and HMAC-signed webhooks.
-                </p>
-                <div class="projects__cards_tech">
-                  <h5>Tech Stack</h5>
-                  <ul class="projects__cards_tech_list">
-                    <li>Go 1.22</li>
-                    <li>PostgreSQL</li>
-                    <li>Redis</li>
-                    <li>REST API</li>
-                    <li>HMAC Signing</li>
-                    <li>Idempotency</li>
-                    <li>Circuit Breaker</li>
-                    <li>Webhooks</li>
-                    <li>Docker</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
+          </div>
+          <p class="soft-card__text">
+            From Spring Cloud to Go and FastAPI, I pick up new tools quickly by
+            building real projects with them and reading the docs end to end.
+          </p>
+        </article>
       </div>
     </section>
 
-    <!--------------------------------- 
-      Footer
-    ----------------------------------->
-    <footer>
-      <div class="container">
-        <p>© thaivanlam's Portfolio</p>
+    <!---------------
+      Contact (design: "Have an Awesome Project Idea?")
+    ----------------->
+    <section class="discuss" id="contact">
+      <h2 class="section-head__title discuss__title">
+        Looking for a Backend Developer?
+        <span class="text-accent">Let’s Discuss</span>
+      </h2>
+
+      <form class="discuss__form" data-mail-form>
+        <span class="discuss__icon"><img src="./assets/figma/sms.svg" alt="" width="32" height="32" /></span>
+        <label class="visually-hidden" for="discuss-email">Your email address</label>
+        <input id="discuss-email" type="email" name="email" placeholder="Enter Email Address" required />
+        <button type="submit" class="solid-btn">Send</button>
+      </form>
+
+      <ul class="discuss__badges">
+        <li><img src="./assets/figma/badge-star.svg" alt="" width="24" height="24" />9+ Hands-on Projects</li>
+        <li><img src="./assets/figma/award.svg" alt="" width="24" height="24" />Java &amp; Spring Boot</li>
+        <li><img src="./assets/figma/shield-tick.svg" alt="" width="24" height="24" />Open to Fresher Roles</li>
+      </ul>
+    </section>
+
+    <!---------------
+      Marquee
+    ----------------->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__band">
+        <div class="marquee__track">
+          <span>Java</span><img src="./assets/figma/marquee-star.svg" alt="" width="34" height="34" />
+          <span>Spring Boot</span><img src="./assets/figma/marquee-star.svg" alt="" width="34" height="34" />
+          <span>Microservices</span><img src="./assets/figma/marquee-star.svg" alt="" width="34" height="34" />
+          <span>RESTful API</span><img src="./assets/figma/marquee-star-alt.svg" alt="" width="34" height="34" />
+          <span>PostgreSQL</span><img src="./assets/figma/marquee-star.svg" alt="" width="34" height="34" />
+          <span>Docker</span><img src="./assets/figma/marquee-star.svg" alt="" width="34" height="34" />
+          <span>RabbitMQ</span><img src="./assets/figma/marquee-star-alt.svg" alt="" width="34" height="34" />
+          <span>Redis</span><img src="./assets/figma/marquee-star.svg" alt="" width="34" height="34" />
+        </div>
+      </div>
+    </div>
+
+    <!---------------
+      Footer (design: "Lets Connect there")
+    ----------------->
+    <footer class="footer">
+      <div class="footer__top">
+        <h2 class="footer__title">Lets Connect there</h2>
+        <a href="mailto:thaivanlam373@gmail.com" class="pill-btn pill-btn--primary footer__hire">
+          Hire me
+          <img src="./assets/figma/arrow-up-right.svg" alt="" width="42" height="42" />
+        </a>
+      </div>
+
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#home" class="logo" aria-label="Thái Văn Lâm — back to top">
+            <span class="logo__mark">TL</span>
+            <span class="logo__text">LAMTV</span>
+          </a>
+          <p>
+            Entry-level Backend Developer from Vietnam, focused on Java, Spring
+            Boot and microservices. Currently looking for a Fresher position in
+            software development.
+          </p>
+          <a href="https://github.com/thaivanlam" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="GitHub">
+            <img src="./assets/icons/github.svg" alt="" />
+          </a>
+        </div>
+
+        <div class="footer__col">
+          <h3>Navigation</h3>
+          <a href="#home">Home</a>
+          <a href="#skills">Skills</a>
+          <a href="#journey">Journey</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+        </div>
+
+        <div class="footer__col">
+          <h3>Contact</h3>
+          <a href="mailto:thaivanlam373@gmail.com">thaivanlam373@gmail.com</a>
+          <a href="https://github.com/thaivanlam" target="_blank" rel="noopener noreferrer">github.com/thaivanlam</a>
+        </div>
+
+        <div class="footer__col footer__col--form">
+          <h3>Get in touch</h3>
+          <form class="footer__form" data-mail-form>
+            <label class="visually-hidden" for="footer-email">Your email address</label>
+            <input id="footer-email" type="email" name="email" placeholder="Email Address" required />
+            <button type="submit" aria-label="Send">
+              <img src="./assets/figma/send.svg" alt="" width="24" height="24" />
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>Copyright© <span data-year>2026</span> Thái Văn Lâm. All Rights Reserved.</p>
+        <p>Built with HTML &amp; CSS</p>
       </div>
     </footer>
   </body>
