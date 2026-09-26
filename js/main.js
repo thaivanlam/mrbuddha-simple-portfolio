@@ -1,5 +1,14 @@
 const CONTACT_EMAIL = "thaivanlam373@gmail.com";
 
+// EmailJS (https://dashboard.emailjs.com) — the placeholders below are replaced with
+// GitHub Secrets by .github/workflows/deploy.yml. Until then (e.g. locally), the forms
+// fall back to opening the visitor's mail app.
+const EMAILJS = {
+  publicKey: "__EMAILJS_PUBLIC_KEY__",
+  serviceId: "__EMAILJS_SERVICE_ID__",
+  templateId: "__EMAILJS_TEMPLATE_ID__",
+};
+
 /* ---------- Nav: highlight the section in view ---------- */
 const navLinks = document.querySelectorAll(".nav__link");
 const sectionObserver = new IntersectionObserver(
@@ -120,14 +129,39 @@ document.querySelectorAll(".marquee__track").forEach((track) => {
   track.innerHTML += track.innerHTML;
 });
 
-/* ---------- Email forms: open the visitor's mail app ---------- */
+/* ---------- Email forms: send via EmailJS, else open the mail app ---------- */
+const emailjsReady = window.emailjs && !Object.values(EMAILJS).some((v) => !v || v.startsWith("__EMAILJS_"));
+if (emailjsReady) emailjs.init({ publicKey: EMAILJS.publicKey });
+
+function openMailApp(email) {
+  const subject = encodeURIComponent("Let's discuss an opportunity");
+  const body = encodeURIComponent(`Hi Lâm,\n\nYou can reach me at ${email}.\n\n`);
+  window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+}
+
 document.querySelectorAll("[data-mail-form]").forEach((form) =>
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const email = form.elements.email.value.trim();
-    const subject = encodeURIComponent("Let's discuss an opportunity");
-    const body = encodeURIComponent(`Hi Lâm,\n\nYou can reach me at ${email}.\n\n`);
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+    const input = form.elements.email;
+    const button = form.querySelector("button");
+    const email = input.value.trim();
+    if (!emailjsReady) return openMailApp(email);
+
+    button.disabled = true;
+    try {
+      await emailjs.send(EMAILJS.serviceId, EMAILJS.templateId, {
+        reply_to: email,
+        from_email: email,
+        page: location.href,
+      });
+      form.reset();
+      input.placeholder = "Thanks! I'll get back to you soon.";
+    } catch (error) {
+      console.error("EmailJS failed, falling back to mailto", error);
+      openMailApp(email);
+    } finally {
+      button.disabled = false;
+    }
   })
 );
 
